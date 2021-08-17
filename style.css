@@ -1,0 +1,374 @@
+:root {
+  /* Apple colors */
+  --apple-blue: rgb(0, 122, 255);
+  --apple-dark-mode-blue: rgb(10, 132, 255);
+
+  --apple-cyan: rgb(50, 173, 230);
+  --apple-dark-mode-cyan: rgb(100, 210, 255);
+
+  --apple-green: rgb(52, 199, 89);
+  --apple-dark-mode-green: rgb(48, 209, 88);
+
+  --apple-orange: rgb(255, 149, 0);
+  --apple-dark-mode-green: rgb(255, 159, 10);
+
+  --apple-pink: rgb(255, 45, 85);
+  --apple-dark-mode-pink: rgb(255, 55, 95);
+
+  --apple-purple: rgb(175, 82, 222);
+  --apple-dark-mode-purple: rgb(191, 90, 242);
+
+  --apple-red: rgb(255, 59, 48);
+  --apple-dark-mode-red: rgb(255, 69, 58);
+
+  --apple-yellow: rgb(255, 204, 0);
+  --apple-dark-mode-yellow: rgb(255, 214, 10);
+
+  --apple-gray: rgb(142, 142, 147);
+  --apple-dark-mode-gray: rgb(142, 147, 147);
+
+  --apple-gray2: rgb(174, 174, 178);
+  --apple-dark-mode-gray2: rgb(99, 99, 102);
+
+  --apple-gray3: rgb(199, 199, 204);
+  --apple-dark-mode-gray3: rgb(72, 72, 74);
+
+  /* Apple End */
+
+  /* Mine Selections */
+  /* purple */
+  --darkPurple: rgb(41, 0, 75);
+  --darkPurpleHover: rgb(61, 9, 104);
+  --purple: rgb(80, 27, 122);
+
+  /* white */
+  --mainBackground: rgb(241, 243, 245);
+  --background: rgb(246, 249, 252);
+  --background2: #fafbfc;
+
+  /* blue */
+  --darkBlue: #5271ff;
+  --darkBlueHover: #5271ff88;
+  --blueHover: rgb(10, 70, 228);
+  --blue: rgb(22, 82, 240);
+  --blue2: #2f5dfb;
+  --lightBlue: rgb(0, 204, 255);
+
+  /* orange */
+  --orange: rgb(255, 196, 0);
+  --darkorange: #ff7f2e;
+
+  /* yellow */
+  --yellow: #ffeb4d;
+  --darkyellow: #feba2b;
+  /* red */
+  --red: #ff4631;
+
+  /* green */
+  --pastelgreen: #1bb778;
+
+  /* black */
+  --darkbackground: #1a1a1a;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background2);
+
+  display: flex;
+  flex-direction: row;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* navbar */
+.navbar {
+  width: 318px;
+  height: 100vh;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  z-index: 2;
+  position: relative;
+}
+
+.navbar::before {
+  content: "";
+  width: 318px;
+  height: 100vh;
+  position: absolute;
+  z-index: -3;
+  top: 0;
+  left: 0;
+  background-color: var(--background);
+}
+
+.navbar-header {
+  width: 100%;
+  height: 10vh;
+  border-top-right-radius: 16px;
+  font-weight: 300;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.navbar-header-daily-text {
+  font-weight: 400;
+  margin-left: 24px;
+  font-size: 24px;
+  line-height: 2rem;
+}
+
+.navbar-header-time {
+  margin-left: 24px;
+  font-size: 20px;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.date-div {
+  margin-left: 8px;
+  font-size: 14px;
+}
+
+.navbar-quote-div {
+  width: 302px;
+  min-height: 8vh;
+  margin: 0 8px;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.navbar-quote {
+  width: 100%;
+  height: 100%;
+
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.navbar-quote-owner {
+  width: 100%;
+  text-align: right;
+  margin-left: -8px;
+}
+
+/* navbar section */
+.navbar-section {
+  width: 100%;
+  margin-bottom: 14vh;
+  margin-top: 24px;
+  padding-left: 4px;
+}
+
+.navbar-section-list {
+  margin: 0 24px;
+  font-size: 24px;
+  font-weight: 300;
+  padding: 8px 0;
+  z-index: -2;
+}
+
+.navbar-section-list-item {
+  height: 5vh;
+  padding: 8px;
+  border-radius: 10px;
+  margin-left: -8px;
+  margin-top: 8px;
+
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--apple-gray);
+
+  transition: 250ms;
+  z-index: 5;
+}
+
+.navbar-section-list-item i {
+  margin-right: 8px;
+}
+
+.active-list-item {
+  color: var(--apple-blue);
+  font-weight: 400;
+}
+
+.list-hover {
+  position: absolute;
+  height: 5vh;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.03);
+  margin-left: -8px;
+  border-radius: 10px;
+
+  transition: 500ms;
+  z-index: -1;
+}
+
+.navbar-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-footer {
+  width: 100%;
+  height: 8vh;
+  border-bottom-right-radius: 16px;
+  color: #00000055;
+  position: absolute;
+  bottom: 0;
+}
+
+.navbar-footer-item {
+  margin: auto 8px;
+  transition: 250ms;
+  cursor: pointer;
+}
+
+.navbar-footer-item:hover {
+  color: #000;
+}
+
+.sections {
+  width: calc(100% - 318px - 96px);
+  min-height: 98vh;
+  margin: auto;
+  border-radius: 8px;
+  padding: 8px;
+
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  width: 90%;
+  min-height: 8vh;
+  margin: auto;
+  background-color: var(--mainBackground);
+  padding: 16px;
+  border-radius: 4px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 400;
+  margin-left: 24px;
+  margin-top: 8px;
+}
+
+.section-datas {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  padding-bottom: 8px;
+}
+
+.section-data {
+  width: 256px;
+  height: 96px;
+  border-radius: 8px;
+  padding: 8px;
+  margin: auto;
+  background-color: var(--background);
+}
+
+.section-data-title {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.data-percentage {
+  margin-top: 8px;
+  margin-left: 4px;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.section-data-progress-div {
+  width: 248px;
+  margin-top: 8px;
+  height: 4px;
+  margin-left: 4px;
+  background-color: var(--apple-gray3);
+  border-radius: 8px;
+}
+
+.section-data-progress {
+  width: 200px;
+  height: 4px;
+  background-color: var(--apple-blue);
+  border-radius: 8px;
+}
+
+.note-data {
+  width: 256px;
+  height: 256px;
+  border-radius: 16px;
+  margin: auto;
+  background-color: var(--background);
+}
+
+.note-data-header {
+  width: 256px;
+  height: 48px;
+  background-color: var(--apple-yellow);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.note-data-note {
+  width: 248px;
+  height: 208px;
+  margin: 0 4px;
+  text-overflow: ellipsis;
+  overflow-y: auto;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+/* todo section */
+.todo-data {
+  height: 64px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  margin: auto 16px;
+}
+
+.todo-checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.todo-data-data {
+  margin-left: 8px;
+}
+
+.todo-data-date {
+  font-size: 14px;
+  color: var(--apple-gray);
+  margin-top: 4px;
+}
