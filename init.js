@@ -7,6 +7,8 @@ AMPM = (h) => {
   return Math.floor(h / 12) >= 1 ? "PM" : "AM";
 };
 
+let dayTime = "";
+
 initNavbar = () => {
   let d = new Date();
 
@@ -27,10 +29,12 @@ initNavbar = () => {
     }
   }
 
+  if (h == 0 && AM_PM == "AM") {
+    h = 12;
+  }
+
   let time = [h, m].join(":");
   let date = [day, month, year].join(".");
-
-  let dayTime = "";
 
   if (h >= 1 && AM_PM == "PM") {
     dayTime = "Afternoon";
@@ -84,10 +88,19 @@ initNavbar = () => {
   navbarHeaderDailyText.textContent = `Good ${dayTime}!`;
 };
 
+initQuotes = () => {
+  let randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+
+  navbarQuoteDiv.textContent = `“${randomQuote.quote_english}“`;
+  navbarQuoteDiv.title = `${randomQuote.quote_turkish || "Not ready yet."}`;
+  navbarQuoteOwnerDiv.textContent = `-${randomQuote.owner}`;
+};
+
 setInterval(initNavbar, 1000);
 
 function init() {
   initNavbar();
+  initQuotes();
 }
 
 init();

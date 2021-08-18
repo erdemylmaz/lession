@@ -212,9 +212,3 @@ const quotes = [
     owner: "Muhammad Ali",
   },
 ];
-
-let randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-
-navbarQuoteDiv.textContent = `“${randomQuote.quote_english}“`;
-navbarQuoteDiv.title = `${randomQuote.quote_turkish || "Not ready yet."}`;
-navbarQuoteOwnerDiv.textContent = `-${randomQuote.owner}`;
