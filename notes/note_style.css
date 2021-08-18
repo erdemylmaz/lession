@@ -1,0 +1,255 @@
+:root {
+  /* Apple colors */
+  --apple-blue: rgb(0, 122, 255);
+  --apple-dark-mode-blue: rgb(10, 132, 255);
+
+  --apple-cyan: rgb(50, 173, 230);
+  --apple-dark-mode-cyan: rgb(100, 210, 255);
+
+  --apple-green: rgb(52, 199, 89);
+  --apple-dark-mode-green: rgb(48, 209, 88);
+
+  --apple-orange: rgb(255, 149, 0);
+  --apple-dark-mode-green: rgb(255, 159, 10);
+
+  --apple-pink: rgb(255, 45, 85);
+  --apple-dark-mode-pink: rgb(255, 55, 95);
+
+  --apple-purple: rgb(175, 82, 222);
+  --apple-dark-mode-purple: rgb(191, 90, 242);
+
+  --apple-red: rgb(255, 59, 48);
+  --apple-dark-mode-red: rgb(255, 69, 58);
+
+  --apple-yellow: rgb(255, 204, 0);
+  --apple-dark-mode-yellow: rgb(255, 214, 10);
+
+  --apple-gray: rgb(142, 142, 147);
+  --apple-dark-mode-gray: rgb(142, 147, 147);
+
+  --apple-gray2: rgb(174, 174, 178);
+  --apple-dark-mode-gray2: rgb(99, 99, 102);
+
+  --apple-gray3: rgb(199, 199, 204);
+  --apple-dark-mode-gray3: rgb(72, 72, 74);
+
+  /* Apple End */
+
+  /* Mine Selections */
+  /* purple */
+  --darkPurple: rgb(41, 0, 75);
+  --darkPurpleHover: rgb(61, 9, 104);
+  --purple: rgb(80, 27, 122);
+
+  /* white */
+  --mainBackground: rgb(241, 243, 245);
+  --background: rgb(246, 249, 252);
+  --background2: #fafbfc;
+
+  /* blue */
+  --darkBlue: #5271ff;
+  --darkBlueHover: #5271ff88;
+  --blueHover: rgb(10, 70, 228);
+  --blue: rgb(22, 82, 240);
+  --blue2: #2f5dfb;
+  --lightBlue: rgb(0, 204, 255);
+
+  /* orange */
+  --orange: rgb(255, 196, 0);
+  --darkorange: #ff7f2e;
+
+  /* yellow */
+  --yellow: #ffeb4d;
+  --darkyellow: #feba2b;
+  /* red */
+  --red: #ff4631;
+
+  /* green */
+  --pastelgreen: #1bb778;
+
+  /* black */
+  --darkbackground: #1a1a1a;
+}
+
+.navbar {
+  z-index: 3;
+}
+
+.notes {
+  width: calc(100% - 318px);
+  height: 100vh;
+
+  background-color: var(--background2);
+}
+
+.notes-title {
+  font-weight: 300;
+  font-size: 24px;
+  margin-left: 24px;
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  height: 32px;
+}
+
+.add-note-btn {
+  width: 32px;
+  height: 32px;
+  margin-left: 8px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.add-note-btn:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.add-note-modal {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  z-index: 10;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-note-container {
+  width: 512px;
+  height: 512px;
+  border-radius: 32px;
+  background-color: var(--background);
+  position: relative;
+}
+
+.add-note-header {
+  width: 100%;
+  height: 96px;
+  background-color: var(--apple-yellow);
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-note-textarea {
+  width: 508px;
+  padding: 0;
+  height: calc(512px - 96px);
+  resize: none;
+  border: 1px solid var(--apple-yellow);
+  border-radius: 32px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.add-note-textarea:focus {
+  outline: none;
+}
+
+.add-note-title-textarea {
+  margin-top: 8px;
+  resize: none;
+  width: 256px;
+  height: 32px;
+  background-color: var(--apple-gray3);
+  border-radius: 8px;
+}
+
+.add-note-title-textarea:focus {
+  background-color: var(--background);
+  outline: none;
+}
+
+.add-note-header-text {
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.confirm-note-btn {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  bottom: 16px;
+  right: 16px;
+}
+
+.confirm-note-btn:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.note {
+  width: 256px;
+  height: 256px;
+  background-color: var(--background);
+  border-radius: 16px;
+}
+
+.note-title {
+  width: 256px;
+  height: 48px;
+  background-color: var(--apple-yellow);
+  font-weight: 300;
+  font-size: 20px;
+  overflow-x: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  cursor: move;
+}
+
+.note-text {
+  resize: none;
+  width: 248px;
+  height: calc(256px - 56px);
+  padding: 4px;
+  overflow-y: auto;
+  border: none;
+  outline: none;
+  background-color: var(--background);
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.confirm-change-btn {
+  width: 32px;
+  height: 32px;
+  font-weight: 300;
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.confirm-change-btn:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.notes-area {
+  margin-top: 24px;
+  margin-left: 24px;
+
+  display: flex;
+  white-space: nowrap;
+  flex-wrap: wrap;
+}

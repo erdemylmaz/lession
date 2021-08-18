@@ -110,6 +110,26 @@ const wallpapers = [
     time: "morning",
     type: "horizontal",
   },
+  {
+    link: "morning-city3",
+    time: "morning",
+    type: "horizontal",
+  },
+  {
+    link: "morning-city4",
+    time: "morning",
+    type: "horizontal",
+  },
+  {
+    link: "evening-city4",
+    time: "evening",
+    type: "horizontal",
+  },
+  {
+    link: "night",
+    time: "night",
+    type: "horizontal",
+  },
 ];
 
 const imageType = ".jpg";
