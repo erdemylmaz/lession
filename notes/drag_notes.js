@@ -7,6 +7,9 @@ let pos4 = 0;
 
 dragNote = (e) => {
   let item = e.target.parentElement;
+  let noteIndex = item.dataset.index;
+
+  let note = notes[noteIndex];
 
   item.style.zIndex = "3";
 
@@ -39,6 +42,11 @@ dragNote = (e) => {
 
   onMouseUp = () => {
     item.setAttribute("data-status", "stopped");
+
+    note.x = item.offsetLeft;
+    note.y = item.offsetTop;
+
+    localStorage.setItem("notes", JSON.stringify(notes));
 
     item.style.zIndex = "2";
   };

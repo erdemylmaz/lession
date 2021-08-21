@@ -10,6 +10,14 @@ hoverEffect.style.width = `${activeListItem.getBoundingClientRect().width}px`;
 hoverEffect.style.left = `${activeItemsX}px`;
 hoverEffect.style.top = `${activeItemsY}px`;
 
+setTimeout(() => {
+  let activeItemsX = activeListItem.offsetLeft;
+  let activeItemsY = activeListItem.offsetTop;
+
+  hoverEffect.style.left = `${activeItemsX}px`;
+  hoverEffect.style.top = `${activeItemsY}px`;
+}, 750);
+
 onHover = (e) => {
   let item = e.target;
   let itemsWidth = item.getBoundingClientRect().width;

@@ -285,6 +285,11 @@ body {
   padding: 8px;
   margin: auto;
   background-color: var(--background);
+  transition: 250ms;
+}
+
+.section-data:hover {
+  box-shadow: 0 0 8px 4px var(--background);
 }
 
 .section-data-title {
@@ -320,7 +325,6 @@ body {
   width: 256px;
   height: 256px;
   border-radius: 16px;
-  margin: auto;
   background-color: var(--background);
 }
 
@@ -357,10 +361,45 @@ body {
   margin: auto 16px;
 }
 
-.todo-checkbox {
+.todo-checkbox-div {
   width: 20px;
   height: 20px;
   border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid #000;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-check-icon {
+  width: 9px;
+  height: 9px;
+  background-color: var(--apple-blue);
+  border-radius: 50%;
+  display: none;
+}
+
+.done-todo .todo-data-title {
+  text-decoration: line-through;
+}
+
+.done-todo {
+  opacity: 0.6;
+}
+
+.done-todo .todo-checkbox-div {
+  cursor: default;
+}
+
+.todo-checked {
+  border-color: var(--apple-blue);
+}
+
+.todo-checked .todo-check-icon {
+  display: flex;
 }
 
 .todo-data-data {
@@ -371,4 +410,24 @@ body {
   font-size: 14px;
   color: var(--apple-gray);
   margin-top: 4px;
+}
+
+.note-datas {
+  width: calc(100% - 32px);
+  height: 256px;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: auto;
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* justify icons on navbar */
+.navbar-section-list-item i {
+  width: 32px;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
