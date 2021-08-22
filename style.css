@@ -77,6 +77,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--background2);
+  overflow: hidden;
 
   display: flex;
   flex-direction: row;
@@ -103,6 +104,8 @@ body {
   z-index: -3;
   top: 0;
   left: 0;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
   background-color: var(--background);
 }
 
@@ -430,4 +433,60 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Dark Mode */
+.dark {
+  background-color: #131313;
+}
+
+.dark .section {
+  background-color: #222;
+  color: #fff;
+}
+
+.dark .section-data {
+  background-color: #131313;
+}
+
+.dark .navbar::before {
+  background-color: #222;
+  color: #fff;
+}
+
+.dark .navbar-header {
+  color: #fff;
+}
+
+.dark .navbar-quote-div {
+  color: #fff;
+}
+
+.dark .list-hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.dark .note-data {
+  background-color: #131313;
+}
+
+.dark .note-data-header {
+  color: #131313;
+  background-color: var(--apple-dark-mode-yellow);
+}
+
+.dark .section-data:hover {
+  box-shadow: 0 0 8px #131313;
+}
+
+.dark .active-list-item {
+  color: var(--apple-dark-mode-blue);
+}
+
+.dark .navbar-footer {
+  color: #aaa;
+}
+
+.dark .navbar-footer-item:hover {
+  color: #fff;
 }

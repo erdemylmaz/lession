@@ -160,8 +160,8 @@ doneToDo = (e) => {
   }, 5000);
 };
 
-async function initToDoSection() {
-  todoList = JSON.parse(localStorage.getItem("todoList"));
+function initToDoSection() {
+  todoList = JSON.parse(localStorage.getItem("todoList")) || [];
   let todoArea = document.querySelector(".todo-datas");
 
   todoList.map((todo, index) => {
@@ -257,6 +257,16 @@ function init() {
   initGoals();
   initToDoSection();
   initNoteSection();
+
+  let mode = localStorage.getItem("mode");
+
+  if (dayTime == "Night") {
+    mode = "dark";
+  }
+
+  if (mode == "dark") {
+    document.body.classList.add("dark");
+  }
 }
 
 init();

@@ -14,10 +14,6 @@
 	<script src="https://kit.fontawesome.com/fa178081cb.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	<div class="add-todo-modal">
-		<div class="todo-modal-container"></div>
-	</div>
-
 	<div class="navbar">
 		<div class="navbar-header">
 			<div class="navbar-header-daily-text">Good Morning!</div>
@@ -53,30 +49,22 @@
 			<div class="todo-book-header">
 				<div class="todo-book-header-shape">
 					<div class="todo-book-text">To Do List</div>
-					<div class="add-todo-btn">+</div>
 				</div>
 			</div>
 			<div class="todo-book-container">
-				<div class="todo">
-					<div class="todo-main">
-						<div class="todo-check-btn">
-							<div class="todo-check-icon"></div>
+
+				<div class="add-todo-div todo add-child">
+					<div class="add-todo-btn add-child">+</div>
+
+					<div class="add-todo-container add-child">
+						<div class="add-todo-header add-child">
+							<input type="text" class="add-todo-title-input add-todo-input add-child" placeholder="Title">
 						</div>
-						<div class="todo-title">Go out</div>
-					</div>
 
-					<div class="todo-bottom">
-						<div class="todo-note">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</div>
-
-						<div class="todo-bottom-bottom">
-							<div class="todo-date">19.08.21</div>
-							<div class="todo-time">12:30</div>
+						<div class="add-todo-bottom add-child">
+							<input type="text" class="add-todo-note-input add-todo-input add-child" placeholder="Notes">
+							<div class="add-todo-date-btn add-child"><i class="fas fa-calendar-alt add-child"></i> Add Date</div>
 						</div>
-					</div>
-
-					<div class="todo-actions">
-						<div class="edit-todo-btn"><i class="fas fa-pen"></i></div>
-						<div class="delete-todo-btn"><i class="fas fa-trash"></i></div>
 					</div>
 				</div>
 			</div>

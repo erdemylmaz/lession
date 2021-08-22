@@ -110,23 +110,6 @@
   position: relative;
 }
 
-.add-todo-btn {
-  font-weight: 200;
-  width: 32px;
-  height: 32px;
-  position: absolute;
-  right: 16px;
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.add-todo-btn:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
 .todo-book-container {
   width: 100%;
   height: calc(90vh - 24px);
@@ -145,6 +128,8 @@
   width: 90%;
   margin: auto;
   margin-top: 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 4px;
 }
 
 .todo-check-btn {
@@ -260,4 +245,95 @@
 
 .todo-done .todo-check-btn {
   cursor: default;
+}
+
+/* Dark Mode */
+.dark .todo-book {
+  background-color: #222;
+}
+
+.dark .add-todo-modal {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.dark .todo-title {
+  color: #fff;
+}
+
+.dark .todo-actions *:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.dark .todo-book-header-shape {
+  background-color: var(--apple-dark-mode-blue);
+}
+
+.add-todo-div {
+  flex-direction: row;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  transition: 250ms;
+  padding-bottom: 8px;
+}
+
+.add-todo-btn {
+  width: 20px;
+  height: 20px;
+  background-color: var(--apple-blue);
+  padding: 4px;
+  margin-left: -4px;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid;
+}
+
+.add-todo-btn:hover {
+  background-color: var(--background);
+  border: 1px solid #000;
+  color: #000;
+}
+
+.add-todo-container {
+  width: 100%;
+  margin-left: 8px;
+
+  display: none;
+}
+
+.add-todo-header {
+  width: 100%;
+}
+
+.add-todo-input {
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.add-todo-note-input {
+  margin-top: 8px;
+}
+
+.add-todo-date-btn {
+  margin-top: 8px;
+  width: 128px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--mainBackground);
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.add-todo-date-btn i {
+  margin-right: 8px;
 }
