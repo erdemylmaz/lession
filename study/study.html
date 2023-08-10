@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Study - Lession</title>
+	<link rel="shortcut icon" href="../images/L.png" type="image/png">
+	<!-- Style -->
+	<link rel="stylesheet" href="./study_style.css">
+	<!-- Icons -->
+	<script src="https://kit.fontawesome.com/6316116050.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="background-img-div">
+	</div>
+
+	<div class="study-navbar">
+		<div class="open-navbar-btn">
+			<i class="fas fa-arrow-right"></i>
+		</div>
+
+		<div class="pomodoro-div draggable-div">
+			<div class="pomodoro-time-div"><span class="pomodoro-current-time">00:00</span> - 25:00</div>
+
+			<div class="pomodoro-progress-div">
+				<div class="pomodoro-progress"></div>
+			</div>
+
+			<div class="pomodoro-buttons">
+				<div class="pause-pomodoro-btn pomodoro-btn"><i class="fas fa-pause"></i></div>
+				<div class="play-pomodoro-btn pomodoro-btn"><i class="fas fa-play"></i></div>
+			</div>
+			<!-- <div class="reset-position-btn">Reset Position</div> -->
+			<div class="reset-pomodoro-btn">Reset Pomodoro</div>
+		</div>
+
+		<div class="music-player-div draggable-div">
+			<div class="musics-list">
+			</div>
+
+			<div class="music-player">
+				<div class="musics-name">Korkak / Erdem Yilmaz</div>
+				<div class="musics-time"><span class="musics-current-time">00:00</span> / <span class="musics-duration">02:30</span></div>
+				<div class="musics-time-bar">
+					<div class="music-time-progress"></div>
+					<div class="music-progress-hover"></div>
+				</div>
+
+				<audio class="music-player-audio"></audio>
+
+				<div class="music-buttons">
+					<div class="loop-music-btn music-btn" title="Loop"><i class="fas fa-exchange-alt"></i></div>
+					<div class="previous-music-btn music-btn" title="Previous Music"><i class="fas fa-step-backward"></i></div>
+					<div class="play-music-btn music-btn" title="Play Music"><i class="fas fa-play"></i></div>
+					<div class="pause-music-btn music-btn" title="Pause Music"><i class="fas fa-pause"></i></div>
+					<div class="next-music-btn music-btn" title="Next Music"><i class="fas fa-step-forward"></i></div>
+
+					<div class="music-volume-div">
+						<i class="fas fa-volume-up"></i>
+						<input type="range" min="0" max="100" value="100" class="music-volume-bar">
+					</div>
+
+					<div class="show-musics-btn">Show Musics</div>
+				</div>
+			</div>
+		</div>
+
+
+		<a href="../index.html" class="home-page-link">Home</a>
+	</div>
+
+	<div class="quote-area">
+		<div class="quote"></div>
+		<div class="quote-owner"></div>
+	</div>
+
+	<audio src="" class="beep-sound"></audio>
+
+<!-- backgrounds -->
+<script src="../wallpapers.js"></script>
+<!-- div's dragging -->
+<script src="./dragging.js"></script>
+<!-- Musics -->
+<script src="../musics.js"></script>
+<!-- Music Player -->
+<script src="./music_player.js"></script>
+<!-- quotes -->
+<script src="../quotes.js"></script>
+<!-- pomodoro timer -->
+<script src="./pomodoro.js"></script>
+<!-- study js -->
+<script src="./study.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,186 @@
+:root {
+  /* Apple colors */
+  --apple-blue: rgb(0, 122, 255);
+  --apple-dark-mode-blue: rgb(10, 132, 255);
+
+  --apple-cyan: rgb(50, 173, 230);
+  --apple-dark-mode-cyan: rgb(100, 210, 255);
+
+  --apple-green: rgb(52, 199, 89);
+  --apple-dark-mode-green: rgb(48, 209, 88);
+
+  --apple-orange: rgb(255, 149, 0);
+  --apple-dark-mode-green: rgb(255, 159, 10);
+
+  --apple-pink: rgb(255, 45, 85);
+  --apple-dark-mode-pink: rgb(255, 55, 95);
+
+  --apple-purple: rgb(175, 82, 222);
+  --apple-dark-mode-purple: rgb(191, 90, 242);
+
+  --apple-red: rgb(255, 59, 48);
+  --apple-dark-mode-red: rgb(255, 69, 58);
+
+  --apple-yellow: rgb(255, 204, 0);
+  --apple-dark-mode-yellow: rgb(255, 214, 10);
+
+  --apple-gray: rgb(142, 142, 147);
+  --apple-dark-mode-gray: rgb(142, 147, 147);
+
+  --apple-gray2: rgb(174, 174, 178);
+  --apple-dark-mode-gray2: rgb(99, 99, 102);
+
+  --apple-gray3: rgb(199, 199, 204);
+  --apple-dark-mode-gray3: rgb(72, 72, 74);
+
+  /* Apple End */
+
+  /* Mine Selections */
+  /* purple */
+  --darkPurple: rgb(41, 0, 75);
+  --darkPurpleHover: rgb(61, 9, 104);
+  --purple: rgb(80, 27, 122);
+
+  /* white */
+  --mainBackground: rgb(241, 243, 245);
+  --background: rgb(246, 249, 252);
+  --background2: #fafbfc;
+
+  /* blue */
+  --darkBlue: #5271ff;
+  --darkBlueHover: #5271ff88;
+  --blueHover: rgb(10, 70, 228);
+  --blue: rgb(22, 82, 240);
+  --blue2: #2f5dfb;
+  --lightBlue: rgb(0, 204, 255);
+
+  /* orange */
+  --orange: rgb(255, 196, 0);
+  --darkorange: #ff7f2e;
+
+  /* yellow */
+  --yellow: #ffeb4d;
+  --darkyellow: #feba2b;
+  /* red */
+  --red: #ff4631;
+
+  /* green */
+  --pastelgreen: #1bb778;
+
+  /* black */
+  --darkbackground: #1a1a1a;
+}
+
+.goals-area {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.goals-title {
+  margin-top: 24px;
+  font-size: 36px;
+  font-weight: 200;
+}
+
+.goals {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 90%;
+  max-height: 90vh;
+  margin: 24px auto;
+}
+
+.goal {
+  min-width: 318px;
+  /* min-height: 128px; */
+  background-color: var(--mainBackground);
+  margin: 24px;
+  border-radius: 8px;
+  padding: 8px;
+  position: relative;
+  transition: 250ms;
+}
+
+.goal:hover {
+  box-shadow: 0 0 8px 4px var(--mainBackground);
+}
+
+.goal-title {
+  margin-left: 8px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.goal-header {
+  display: flex;
+}
+
+.goal-add-data-btn {
+  margin-left: auto;
+  margin-right: 8px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 200;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.goal-add-data-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.goal-container {
+  margin: 8px;
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+.goal-main-progress-div {
+  width: 100%;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.goal-progress-div {
+  flex: 1;
+  margin: auto 4px;
+  height: 4px;
+  background-color: var(--apple-gray);
+  border-radius: 32px;
+}
+
+.goal-progress {
+  width: 0;
+  height: 4px;
+  border-radius: 32px;
+  background-color: var(--apple-blue);
+  transition: 500ms;
+}
+
+.goal-total-progress {
+  margin-left: auto;
+}
+
+.goal-percentage {
+  font-weight: 500;
+}
+
+.goal-footer {
+  margin-top: 16px;
+  text-align: right;
+  color: var(--apple-gray);
+  font-weight: 200;
+  margin-right: 8px;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Notes - Lession</title>
+	<link rel="shortcut icon" href="../images/L.png" type="image/png">
+	<!-- Style -->
+	<link rel="stylesheet" href="./note_style.css">
+	<!-- Navbar Style -->
+	<link rel="stylesheet" href="../style.css">
+	<!-- Icons -->
+	<script src="https://kit.fontawesome.com/6316116050.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="add-note-modal">
+		<div class="add-note-container">
+			<div class="add-note-header">
+				<div class="add-note-header-text">Note's Title</div>
+				<textarea class="add-note-title-textarea"></textarea>
+			</div>
+			<textarea class="add-note-textarea"></textarea>
+
+			<div class="confirm-note-btn"><i class="fas fa-check"></i></div>
+		</div>
+	</div>
+
+	<div class="navbar">
+		<div class="navbar-header">
+			<div class="navbar-header-daily-text">Good Morning!</div>
+			<div class="navbar-header-time">11:50</div>
+		</div>
+
+		<div class="navbar-quote-div">
+			<div class="navbar-quote">hidden</div>
+			<div class="navbar-quote-owner">Erdem Yilmaz</div>
+		</div>
+
+		<div class="navbar-section">
+			<div class="list-hover"></div>
+			<div class="navbar-section-list">
+				<a href="../index.html" class="navbar-section-list-item home-item"><i class="fas fa-home"></i> Home</a>
+				<a href="../study/study.html" class="navbar-section-list-item study-item"><i class="fas fa-pen"></i> Study</a>
+				<a href="../goals/goals.html" class="navbar-section-list-item goals-item"><i class="far fa-dot-circle"></i> Goals</a>
+				<a href="../todo/todo.html" class="navbar-section-list-item todo-item"><i class="far fa-clipboard"></i> To Do List</a>
+				<a href="#" class="navbar-section-list-item notes-item active-list-item"><i class="far fa-sticky-note"></i> Notes</a>
+				<a href="" class="navbar-section-list-item statistics-item "><i class="far fa-chart-bar"></i> Statistics</a>
+				<a href="" class="navbar-section-list-item settings-item"><i class="fas fa-wrench"></i> Settings</a>
+			</div>
+		</div>
+
+		<div class="navbar-footer">
+			<span class="navbar-footer-item">About</span>
+			<span class="navbar-footer-item">Twitter</span>
+		</div>
+	</div>
+
+	<div class="notes">
+		<div class="notes-title">Notes <div class="add-note-btn">+</div></div>
+
+		<div class="notes-area">
+		</div>
+	</div>
+
+<!-- Elements -->
+<script src="../elements.js"></script>
+<!-- Hover effect -->
+<script src="../hoverEffect.js"></script>
+<!-- Quotes -->
+<script src="../quotes.js"></script>
+<!-- Init -->
+<script src="../init.js"></script>
+<!-- Draggable notes -->
+<script src="./drag_notes.js"></script>
+<!-- Notes js -->
+<script src="./notes.js"></script>
+</body>
+</html>
